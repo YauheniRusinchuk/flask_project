@@ -278,3 +278,24 @@
   background-color: black;
   color: white;
 }
+
+.search_container {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.search_container form input {
+  border: 1px solid #7cc1de;
+  border-radius: 20px;
+  padding: 3px 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: grey;
+  outline: none;
+}
+
+.search_container form input:focus {
+  box-shadow: 0 0 5px grey;
+  color: black;
+}

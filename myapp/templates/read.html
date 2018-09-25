@@ -9,6 +9,7 @@
   <a href="{{url_for('write')}}">НАПИСАТЬ</a>
 </div>
 
+{% include "search.html" %}
   <div class='read_container'>
     {% for article in articles %}
         <div class='article'>
