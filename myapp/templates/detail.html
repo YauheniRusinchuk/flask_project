@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %} {{article.title}} {% endblock title %}
+
+
+{% block content %}
+<div class="go_home">
+  <a href="{{url_for('read')}}">ЧИТАТЬ</a><br/>
+  <a href="{{url_for('write')}}">НАПИСАТЬ</a>
+</div>
+
+  <div class='detail_container'>
+    <h3> {{article.title}} </h3>
+    <p>{{article.body}}</p>
+    {% if article.url != None %}
+      <p>URL : <a href="{{article.url}}">{{article.url}}</a></p>
+    {% endif %}
+  </div>
+
+  <div class='container_comments'>
+    {% if comments %}
+      {% for comment in comments %}
+        <p class='comment'>{{comment.text}}</p>
+      {% endfor %}
+    {% else %}
+      <p class='not_comments'> ПОКА НЕ КОММЕНТАРИЕВ! </p>
+    {% endif %}
+  </div>
+
+  <div class='commentform'>
+    <form class='commentform_form' method="POST" novalidate>
+      {{form.hidden_tag()}}
+      <p>
+        {{form.text(placeholder='текст комментария ...', class='commentform_text')}}
+        {{form.submit(class='commentform_btn')}}
+      </p>
+    </form>
+  </div>
+
+{% endblock content %}

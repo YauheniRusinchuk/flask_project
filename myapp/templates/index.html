@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} ГЛАВНАЯ {% endblock title %}
+
+{% block content %}
+  <div class="index">
+    <div class='main'>
+      <p> ЧИТАЙ ИЛИ НАПИШИ СВОЮ ИСТОРИЮ </p>
+      <a href="{{ url_for('read') }}">ЧИТАТЬ</a>
+      <a href="{{ url_for('write') }}">НАПИСАТЬ</a>
+    </div>
+
+    <div class="about">
+      <a href="{{ url_for('about') }}">о нас</a>
+    </div>
+  </div>
+{% endblock content  %}

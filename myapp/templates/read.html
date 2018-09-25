@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} ЧИТАЕМ {% endblock title %}
+
+{% block content %}
+
+<div class="go_home">
+  <a href="{{url_for('index')}}">ДОМОЙ</a><br/>
+  <a href="{{url_for('write')}}">НАПИСАТЬ</a>
+</div>
+
+  <div class='read_container'>
+    {% for article in articles %}
+        <div class='article'>
+          <span>{{article.comments.all()|length}}</span>
+          <a href="{{url_for('detail', id=article.id)}}">{{article.title}}</a>
+          <p>{{article.body}}</p>
+          {% if article.url != None %}
+            <p class='p_url'>URL : {{article.url}}</p>
+          {% else %}
+            <p></p>
+          {% endif %}
+        </div>
+    {% endfor %}
+  </div>
+{% endblock content %}

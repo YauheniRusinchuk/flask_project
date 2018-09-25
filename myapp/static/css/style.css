@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.index .main {
+  width: 50%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index .main p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: grey;
+  font-weight: bold;
+}
+
+.index .main a {
+  text-decoration: none;
+  color: #7cc1de;
+  margin: 5px;
+  border: 2px solid #7cc1de;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 30px;
+  border-radius: 3px;
+  box-shadow: 0 0 20px #e6e6e6;
+  background-color: white;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+}
+
+.index .main a:hover {
+  background-color: #7cc1de;
+  color: white;
+}
+
+
+.index .about {
+  position: fixed;
+  left: 50px;
+  top: 90vh;
+}
+
+.index .about a {
+  text-decoration: none;
+  color: #7cc1de;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid #7cc1de;
+  border-radius: 3px;
+  padding: 1px 30px;
+  box-shadow: none;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+}
+
+.index .about a:hover {
+  background-color: #7cc1de;
+  color: white;
+}
+
+
+
+.new_history {
+  width: 50%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.new_history_title {
+  width: 100%;
+  padding: 3px 5px;
+  outline: none;
+  border: none;
+  border: 2px solid #e6e6e6;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.new_history_title:focus {
+  border: 2px solid #7cc1de;
+}
+
+.new_history_content {
+  margin-top: 20px;
+  padding: 3px 5px;
+  outline: none;
+  border: 2px solid #e6e6e6;
+  width: 100%;
+  height: 300px;
+  font-size: 14px;
+  font-weight: bold;
+  resize: none;
+  border-radius: 3px;
+}
+
+.new_history_content:focus {
+  border: 2px solid #7cc1de;
+}
+
+.new_history_url {
+  width: 100%;
+  padding: 3px 5px;
+  outline: none;
+  border: 2px solid #e6e6e6;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.new_history_url:focus {
+  border: 2px solid #7cc1de;
+}
+
+.new_history_btn {
+  padding: 3px 50px;
+  background-color: #7cc1de;
+  border: 2px solid #7cc1de;
+  color: white;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+.about_content {
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.go_home {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+
+.go_home a {
+  color: #7cc1de;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.read_container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.read_container .article {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 10px 0;
+  position: relative;
+}
+
+.read_container .article span {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  border: 1px solid #7cc1de;
+  border-radius: 3px;
+  padding: 1px 5px;
+  background-color: #7cc1de;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+.read_container .article a {
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.read_container .article p {
+  font-size: 14px;
+  font-weight: bold;
+  color: grey;
+}
+
+.read_container .article .p_url {
+  color: #7cc1de;
+}
+
+
+
+.error {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.error img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.detail_container {
+  width: 50%;
+  margin: 10px auto;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.detail_container p {
+  font-size: 18px;
+}
+
+.detail_container p a {
+  color: #7cc1de;
+}
+
+.container_comments {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.container_comments .not_comments {
+  color: #7cc1de;
+  font-weight: bold;
+}
+
+.container_comments .comment {
+  font-weight: bold;
+  color: grey;
+  margin-bottom: 20px;
+}
+
+.commentform {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.commentform .commentform_text {
+  width: 300px;
+  padding: 3px 5px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 3px;
+  outline: none;
+}
+
+.commentform .commentform_btn {
+  border: 2px solid black;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 3px 10px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  outline: none;
+}
+
+.commentform .commentform_btn:hover {
+  background-color: black;
+  color: white;
+}

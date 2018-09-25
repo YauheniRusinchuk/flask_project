@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %} ПИШЕМ ИСТОРИЮ {% endblock title %}
+
+{% block content %}
+<div class='new_history'>
+  <div class="go_home">
+    <a href="{{url_for('index')}}">ДОМОЙ</a><br/>
+    <a href="{{url_for('read')}}">ЧИТАТЬ</a>
+  </div>
+  <h3> НОВАЯ ЗАПИСЬ </h3>
+  <form action="" method="POST" novalidate>
+    {{form.hidden_tag()}}
+    <p>
+      {# {{form.title.label}} <br/> #}
+      {{form.title(class='new_history_title', placeholder='ЗАГОЛОВОК ...')}}
+      {% if form.title.errors %}
+      <span style="color: red; font-weight: bold;"> [ВВЕДИТЕ ЗАГОЛОВОК] </span>
+      {% endif %}
+    </p>
+    <p>
+      {# {{form.body.label}}<br/> #}
+      {{form.body(class='new_history_content', placeholder='ТЕКСТ ...')}}
+      {% if form.body.errors %}
+      <span style="color: red; font-weight: bold;"> [ВВЕДИТЕ ТЕКСТ] </span>
+      {% endif %}
+    </p>
+    <p>
+      {{form.url(placeholder='МОЖЕТЕ ДОБАВИТЬ АДРЕСС НОВОСТИ', class='new_history_url')}}
+    </p>
+    <p>
+      {{form.submit(class='new_history_btn')}}
+    </p>
+  </form>
+</div>
+{% endblock content %}
