@@ -285,7 +285,7 @@
   top: 10px;
 }
 
-.search_container form input {
+.search_container input {
   border: 1px solid #7cc1de;
   border-radius: 20px;
   padding: 3px 5px;
@@ -295,7 +295,7 @@
   outline: none;
 }
 
-.search_container form input:focus {
+.search_container input:focus {
   box-shadow: 0 0 5px grey;
   color: black;
 }

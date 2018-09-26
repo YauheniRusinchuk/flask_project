@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from flask import request
 from myapp import app, db
 from myapp.models import Article, Comment
 from flask import render_template, redirect, flash, url_for, json
@@ -21,11 +21,18 @@ def detail(id):
     form = CommentForm()
     article = Article.query.get(id)
     comments = article.comments.all()
-    if form.validate_on_submit():
-        comment = Comment(text=form.text.data, com=article)
-        db.session.add(comment)
-        db.session.commit()
-        return redirect(url_for('detail', id=id))
+    if request.method == 'POST':
+        text = request.form['text']
+        if text != '':
+            comment = Comment(text=text, com=article)
+            db.session.add(comment)
+            db.session.commit()
+            return json.dumps({'status': 'OK', 'text': text}).encode('utf8')
+    # if form.validate_on_submit():
+    #     comment = Comment(text=form.text.data, com=article)
+    #     db.session.add(comment)
+    #     db.session.commit()
+    #     return redirect(url_for('detail', id=id))
     return render_template('detail.html', article=article, comments=comments, form=form)
 
 
